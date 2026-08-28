@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: #ffffff;
+  color: #0a0a0a;
+}
+
+::selection {
+  background-color: #ff582b;
+  color: #ffffff;
+}
+
+.focus-ring {
+  @apply outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2;
+}
+
+.tag-label {
+  @apply inline-block bg-accent text-white font-display tracking-wide text-lg sm:text-xl px-4 py-1.5;
+}
+
+.container-x {
+  @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+}
+
+.btn-outline {
+  @apply inline-flex items-center gap-2 border border-current px-5 py-2.5 text-sm font-semibold tracking-wide hover:bg-foreground hover:text-white transition-colors focus-ring;
+}
+
+.btn-accent {
+  @apply inline-flex items-center justify-center gap-2 bg-accent text-white px-6 py-3 text-sm font-bold uppercase tracking-wide hover:bg-accent-dark transition-colors focus-ring;
+}
