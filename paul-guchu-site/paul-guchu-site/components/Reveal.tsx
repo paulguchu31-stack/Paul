@@ -6,6 +6,7 @@ type RevealProps = {
   children: ReactNode;
   className?: string;
   delay?: number;
+  /** Direction the element animates in from. */
   from?: "up" | "left" | "right" | "none";
 };
 

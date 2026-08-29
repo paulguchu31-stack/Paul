@@ -34,7 +34,7 @@ export default function Trainer() {
               confidence, and sustainable fitness habits through a plan made
               for their goals, not a generic template.
             </p>
-            
+            <a
               href={createWhatsAppUrl(whatsappMessages.about)}
               target="_blank"
               rel="noopener noreferrer"

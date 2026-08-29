@@ -44,7 +44,7 @@ export default function Header() {
 
         <nav className="hidden md:flex items-center gap-8">
           {nav.map((item) => (
-            
+            <a
               key={item.href}
               href={item.href}
               className="relative text-sm font-medium group focus-ring rounded py-1"
@@ -55,7 +55,7 @@ export default function Header() {
           ))}
         </nav>
 
-        
+        <a
           href={createWhatsAppUrl(whatsappMessages.hero)}
           target="_blank"
           rel="noopener noreferrer"
@@ -97,7 +97,7 @@ export default function Header() {
           }`}
         >
           {nav.map((item) => (
-            
+            <a
               key={item.href}
               href={item.href}
               onClick={() => setOpen(false)}
@@ -106,7 +106,7 @@ export default function Header() {
               {item.label}
             </a>
           ))}
-          
+          <a
             href={createWhatsAppUrl(whatsappMessages.hero)}
             target="_blank"
             rel="noopener noreferrer"

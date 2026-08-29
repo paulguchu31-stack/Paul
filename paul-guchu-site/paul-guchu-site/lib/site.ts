@@ -1,8 +1,12 @@
+// Central configuration for Paul Guchu's fitness website.
+// Update trainer info, packages, nav, and social links here — everything
+// else on the site reads from this single source of truth.
+
 export const trainer = {
   name: "Paul Guchu",
   title: "Certified Fitness Trainer",
   location: "Dubai, UAE",
-  whatsappNumber: "971555420634",
+  whatsappNumber: "971555420634", // digits only, used to build wa.me links
   whatsappDisplay: "+971 55 542 0634",
 };
 
@@ -21,6 +25,8 @@ export const certifications = [
   },
 ] as const;
 
+// Matches the reference nav (Home / About / Plans / Contact).
+// "Login" from the reference is intentionally omitted per brief.
 export const nav = [
   { label: "Home", href: "#top" },
   { label: "About", href: "#about" },
@@ -28,6 +34,9 @@ export const nav = [
   { label: "Contact", href: "#contact" },
 ] as const;
 
+// Free-to-use stock photography (Pexels License — free for commercial use,
+// no attribution legally required, but credited in IMAGE-CREDITS.md anyway).
+// All by photographer Andrea Piacquadio.
 export const stockImages = {
   groupWorkout:
     "https://images.pexels.com/photos/863926/pexels-photo-863926.jpeg?auto=compress&cs=tinysrgb&w=1600",

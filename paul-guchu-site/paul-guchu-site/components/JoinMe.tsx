@@ -11,7 +11,7 @@ export default function JoinMe() {
         <h2 className="font-display text-3xl sm:text-4xl md:text-5xl uppercase leading-[0.95] max-w-xl">
           Take The First Step On A Journey That Pushes You To The Limit
         </h2>
-        
+        <a
           href={createWhatsAppUrl(whatsappMessages.joinMe)}
           target="_blank"
           rel="noopener noreferrer"

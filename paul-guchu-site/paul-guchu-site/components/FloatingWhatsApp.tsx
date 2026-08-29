@@ -10,6 +10,7 @@ export default function FloatingWhatsApp() {
 
   useEffect(() => {
     const show = setTimeout(() => setReady(true), 900);
+    // Briefly self-expand once on load to draw the eye, then settle to icon-only.
     const expand = setTimeout(() => setExpanded(true), 1800);
     const collapse = setTimeout(() => setExpanded(false), 4600);
     return () => {
@@ -22,7 +23,7 @@ export default function FloatingWhatsApp() {
   if (!ready) return null;
 
   return (
-    
+    <a
       href={createWhatsAppUrl(whatsappMessages.floating)}
       target="_blank"
       rel="noopener noreferrer"
@@ -31,6 +32,7 @@ export default function FloatingWhatsApp() {
       onMouseLeave={() => setExpanded(false)}
       className="fixed bottom-5 right-5 sm:bottom-7 sm:right-7 z-50 flex items-center focus-ring rounded-full animate-pop-in"
     >
+      {/* Expanding rings */}
       <span className="absolute inset-0 rounded-full bg-whatsapp animate-ring-pulse motion-reduce:hidden" />
       <span
         className="absolute inset-0 rounded-full bg-whatsapp animate-ring-pulse motion-reduce:hidden"

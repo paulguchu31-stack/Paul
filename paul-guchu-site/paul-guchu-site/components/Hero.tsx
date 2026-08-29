@@ -56,13 +56,13 @@ export default function Hero() {
           className="mt-6 flex flex-wrap gap-3 animate-fade-up"
           style={{ animationDelay: "150ms" }}
         >
-          
+          <a
             href="#pricing"
             className="btn-outline text-white border-white/70 hover:bg-white hover:text-foreground hover:scale-[1.03] active:scale-95"
           >
             My Plans <ArrowUpRight size={16} />
           </a>
-          
+          <a
             href={createWhatsAppUrl(whatsappMessages.hero)}
             target="_blank"
             rel="noopener noreferrer"
@@ -89,7 +89,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute right-6 sm:right-8 bottom-8 z-10 hidden sm:flex flex-col items-center gap-1 text-white/70">
+      <div className="absolute right-6 sm:right-8 bottom-8 z-10 hidden sm:flex-flex-col items-center gap-1 text-white/70">
         <span className="text-[10px] tracking-widest uppercase [writing-mode:vertical-rl]">
           Scroll
         </span>

@@ -23,7 +23,7 @@ export default function Pricing() {
                     fill
                     sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
                     className="object-cover object-top"
-                  />
+                />
                 </div>
                 <div className="p-6 flex flex-col flex-1">
                   <h3 className="font-display text-xl uppercase mb-1">{plan.name}</h3>
@@ -32,7 +32,7 @@ export default function Pricing() {
                     <span className="text-xs text-muted">{plan.priceNote}</span>
                   </p>
 
-                  
+                  <a
                     href={createWhatsAppUrl(plan.whatsappMessage)}
                     target="_blank"
                     rel="noopener noreferrer"
