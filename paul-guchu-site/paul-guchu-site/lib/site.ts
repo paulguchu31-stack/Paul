@@ -1,12 +1,8 @@
-// Central configuration for Paul Guchu's fitness website.
-// Update trainer info, packages, nav, and social links here — everything
-// else on the site reads from this single source of truth.
-
 export const trainer = {
   name: "Paul Guchu",
   title: "Certified Fitness Trainer",
   location: "Dubai, UAE",
-  whatsappNumber: "971555420634", // digits only, used to build wa.me links
+  whatsappNumber: "971555420634",
   whatsappDisplay: "+971 55 542 0634",
 };
 
@@ -25,14 +21,21 @@ export const certifications = [
   },
 ] as const;
 
-// Matches the reference nav (Home / About / Plans / Contact).
-// "Login" from the reference is intentionally omitted per brief.
 export const nav = [
   { label: "Home", href: "#top" },
   { label: "About", href: "#about" },
   { label: "Plans", href: "#pricing" },
   { label: "Contact", href: "#contact" },
 ] as const;
+
+export const stockImages = {
+  groupWorkout:
+    "https://images.pexels.com/photos/863926/pexels-photo-863926.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  womenWarmup:
+    "https://images.pexels.com/photos/4376663/pexels-photo-4376663.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  womenDumbbells:
+    "https://images.pexels.com/photos/903171/pexels-photo-903171.jpeg?auto=compress&cs=tinysrgb&w=1600",
+};
 
 export const socialLinks = {
   facebook: "#",
@@ -112,7 +115,7 @@ export const trainingPlans: TrainingPlan[] = [
       "3 sessions per week",
       "Group accountability and support",
     ],
-    image: "/images/WhatsApp_Image_2026-08-28_at_6_01_33_PM.jpeg",
+    image: stockImages.groupWorkout,
     whatsappMessage:
       "Hi Paul, I'm interested in the Group Training Package. Could you please share the details?",
   },

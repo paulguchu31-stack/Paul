@@ -36,11 +36,21 @@ const config: Config = {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-50%)" },
         },
+        ringPulse: {
+          "0%": { transform: "scale(1)", opacity: "0.6" },
+          "100%": { transform: "scale(1.9)", opacity: "0" },
+        },
+        popIn: {
+          "0%": { opacity: "0", transform: "scale(0.4) translateY(20px)" },
+          "100%": { opacity: "1", transform: "scale(1) translateY(0)" },
+        },
       },
       animation: {
         "pulse-soft": "pulseSoft 2.6s ease-in-out infinite",
         "fade-up": "fadeUp 0.7s ease-out both",
         marquee: "marquee 22s linear infinite",
+        "ring-pulse": "ringPulse 2.2s ease-out infinite",
+        "pop-in": "popIn 0.5s cubic-bezier(0.34,1.56,0.64,1) both",
       },
     },
   },

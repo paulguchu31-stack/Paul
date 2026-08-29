@@ -1,5 +1,6 @@
 import { Award, Dumbbell, HeartPulse } from "lucide-react";
 import { certifications } from "@/lib/site";
+import Reveal from "./Reveal";
 
 const icons = {
   certificate: Award,
@@ -15,15 +16,17 @@ export default function Certifications() {
           Qualifications &amp; Certifications
         </p>
         <div className="grid sm:grid-cols-3 gap-8 sm:gap-6 max-w-3xl mx-auto">
-          {certifications.map((cert) => {
+          {certifications.map((cert, i) => {
             const Icon = icons[cert.icon];
             return (
-              <div key={cert.name} className="flex flex-col items-center text-center gap-3">
-                <Icon size={28} className="text-accent" aria-hidden="true" />
-                <p className="text-sm font-medium text-foreground max-w-[220px]">
-                  {cert.name}
-                </p>
-              </div>
+              <Reveal key={cert.name} delay={i * 100}>
+                <div className="flex flex-col items-center text-center gap-3">
+                  <Icon size={28} className="text-accent" aria-hidden="true" />
+                  <p className="text-sm font-medium text-foreground max-w-[220px]">
+                    {cert.name}
+                  </p>
+                </div>
+              </Reveal>
             );
           })}
         </div>

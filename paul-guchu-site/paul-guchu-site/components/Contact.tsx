@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Reveal from "./Reveal";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -44,7 +45,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="grid md:grid-cols-2">
-      <div className="order-2 md:order-1 px-5 sm:px-8 md:px-12 py-16 sm:py-20">
+      <Reveal from="left" className="order-2 md:order-1 px-5 sm:px-8 md:px-12 py-16 sm:py-20">
         <p className="text-sm font-semibold mb-6">Got questions? Just contact me below</p>
 
         <form onSubmit={handleSubmit} className="space-y-5 max-w-md">
@@ -136,9 +137,9 @@ export default function Contact() {
             </p>
           )}
         </form>
-      </div>
+      </Reveal>
 
-      <div className="order-1 md:order-2 relative min-h-[320px]">
+      <Reveal from="right" delay={100} className="order-1 md:order-2 relative min-h-[320px]">
         <span className="tag-label absolute top-5 right-5 sm:top-8 sm:right-8 z-10">
           Reach Out
         </span>
@@ -147,9 +148,9 @@ export default function Contact() {
           alt="Paul Guchu, certified fitness trainer"
           fill
           sizes="(min-width: 768px) 50vw, 100vw"
-          className="object-cover"
+          className="object-cover object-top"
         />
-      </div>
+      </Reveal>
     </section>
   );
 }

@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { Flame, Smile, Repeat } from "lucide-react";
+import { stockImages } from "@/lib/site";
+import Reveal from "./Reveal";
 
 const benefits = [
   {
@@ -23,49 +25,55 @@ const gridImages = [
   {
     src: "/images/WhatsApp_Image_2026-08-28_at_5_59_21_PM.jpeg",
     alt: "Paul Guchu at My PT Academy gym",
+    position: "object-top",
   },
   {
-    src: "/images/WhatsApp_Image_2026-08-28_at_5_59_20_PM__1_.jpeg",
-    alt: "Paul Guchu training session",
+    src: stockImages.womenWarmup,
+    alt: "Women warming up together before a training session",
+    position: "object-center",
   },
   {
     src: "/images/WhatsApp_Image_2026-08-28_at_5_59_19_PM.jpeg",
     alt: "Paul Guchu, certified fitness trainer",
+    position: "object-top",
   },
   {
-    src: "/images/WhatsApp_Image_2026-08-28_at_5_59_17_PM.jpeg",
-    alt: "Paul Guchu coaching a workout",
+    src: stockImages.womenDumbbells,
+    alt: "Women exercising with dumbbells in a gym",
+    position: "object-center",
   },
 ];
 
 export default function Benefits() {
   return (
     <section id="benefits" className="container-x py-16 sm:py-20">
-      <h2 className="font-display text-3xl sm:text-4xl md:text-5xl uppercase mb-10 sm:mb-12">
-        Benefits Of Working Out
-      </h2>
+      <Reveal>
+        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl uppercase mb-10 sm:mb-12">
+          Benefits Of Working Out
+        </h2>
+      </Reveal>
 
       <div className="grid sm:grid-cols-3 gap-10 mb-12">
-        {benefits.map((b) => (
-          <div key={b.title}>
+        {benefits.map((b, i) => (
+          <Reveal key={b.title} delay={i * 120}>
             <b.icon size={28} className="text-accent mb-4" aria-hidden="true" />
             <h3 className="font-display text-xl uppercase mb-2">{b.title}</h3>
             <p className="text-sm text-muted leading-relaxed">{b.text}</p>
-          </div>
+          </Reveal>
         ))}
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
-        {gridImages.map((img) => (
-          <div key={img.src} className="relative aspect-square overflow-hidden">
+        {gridImages.map((img, i) => (
+          <Reveal key={img.src} delay={i * 90} className="relative aspect-square overflow-hidden">
             <Image
               src={img.src}
               alt={img.alt}
               fill
               sizes="(min-width: 640px) 25vw, 50vw"
-              className="object-cover hover:scale-105 transition-transform duration-500"
+              className={`object-cover ${img.position} hover:scale-105 transition-transform duration-500`}
             />
-          </div>
+          </Reveal>
         ))}
       </div>
     </section>

@@ -41,9 +41,9 @@ body {
 }
 
 .btn-outline {
-  @apply inline-flex items-center gap-2 border border-current px-5 py-2.5 text-sm font-semibold tracking-wide hover:bg-foreground hover:text-white transition-colors focus-ring;
+  @apply inline-flex items-center gap-2 border border-current px-5 py-2.5 text-sm font-semibold tracking-wide hover:bg-foreground hover:text-white transition-all duration-200 focus-ring;
 }
 
 .btn-accent {
-  @apply inline-flex items-center justify-center gap-2 bg-accent text-white px-6 py-3 text-sm font-bold uppercase tracking-wide hover:bg-accent-dark transition-colors focus-ring;
+  @apply inline-flex items-center justify-center gap-2 bg-accent text-white px-6 py-3 text-sm font-bold uppercase tracking-wide hover:bg-accent-dark transition-all duration-200 focus-ring shadow-md hover:shadow-lg;
 }

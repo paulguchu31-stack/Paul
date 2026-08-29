@@ -1,20 +1,22 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Inter } from "next/font/google";
+import { Anton, Manrope } from "next/font/google";
 import "./globals.css";
 import { buildMetadata } from "@/lib/seo";
 import { trainer, siteUrl, certifications } from "@/lib/site";
 import { faqs } from "@/lib/site";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import ScrollProgress from "@/components/ScrollProgress";
 
-const display = Bebas_Neue({
+const display = Anton({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-display",
   display: "swap",
 });
 
-const body = Inter({
+const body = Manrope({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
   variable: "--font-body",
   display: "swap",
 });
@@ -66,6 +68,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${display.variable} ${body.variable}`}>
       <body className="font-body antialiased">
+        <ScrollProgress />
         {children}
         <FloatingWhatsApp />
         <script
