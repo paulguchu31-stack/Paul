@@ -8,7 +8,6 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ScrollProgress from "@/components/ScrollProgress";
 import CursorFollower from "@/components/CursorFollower";
 
-
 export const viewport = {
   width: "device-width",
   initialScale: 1,
