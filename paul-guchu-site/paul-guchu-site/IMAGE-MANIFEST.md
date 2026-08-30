@@ -1,4 +1,4 @@
-# Image Manifest — Paul Guchu Personal Training Website
+# Image Manifest - Paul Guchu Personal Training Website
 
 All filenames below are **exactly** as uploaded, unchanged (case, hyphens,
 underscores, spaces, and extension all preserved). They live in
@@ -6,20 +6,20 @@ underscores, spaces, and extension all preserved). They live in
 
 | Filename | Orientation | Native size | Used in |
 |---|---|---|---|
-| `Editing_gym_image_and_barbell_202608281934.jpeg` | Landscape | 2752×1536 | **Hero** — full-bleed background |
+| `Editing_gym_image_and_barbell_202608281934.jpeg` | Landscape | 2752×1536 | **Hero** - full-bleed background |
 | `WhatsApp_Image_2026-08-28_at_6_00_11_PM.jpeg` | Portrait | 1200×1600 | **Trainer / "This Is How I Made It"** section |
 | `WhatsApp_Image_2026-08-28_at_6_01_33_PM__1_.jpeg` | Portrait | 720×1280 | **Join Me** section |
 | `WhatsApp_Image_2026-08-28_at_5_59_21_PM.jpeg` | Portrait | 1200×1600 | **Benefits** image grid |
 | `WhatsApp_Image_2026-08-28_at_5_59_20_PM__1_.jpeg` | Portrait | 1200×1600 | **Benefits** image grid |
 | `WhatsApp_Image_2026-08-28_at_5_59_19_PM.jpeg` | Portrait | 1200×1600 | **Benefits** image grid |
 | `WhatsApp_Image_2026-08-28_at_5_59_17_PM.jpeg` | Portrait | 3024×4032 | **Benefits** image grid, **Reach Out / Contact** section, Open Graph share image |
-| `WhatsApp_Image_2026-08-28_at_5_59_20_PM.jpeg` | Portrait | 1200×1600 | **Pricing** — Basic Package card |
-| `WhatsApp_Image_2026-08-28_at_5_59_22_PM.jpeg` | Portrait | 1200×1600 | **Pricing** — Standard Package card |
-| `WhatsApp_Image_2026-08-28_at_5_59_22_PM__1_.jpeg` | Portrait | 1200×1600 | **Pricing** — Premium Package card |
-| `WhatsApp_Image_2026-08-28_at_6_01_33_PM.jpeg` | Portrait | 720×1280 | **Pricing** — Group Training card |
+| `WhatsApp_Image_2026-08-28_at_5_59_20_PM.jpeg` | Portrait | 1200×1600 | **Pricing** - Basic Package card |
+| `WhatsApp_Image_2026-08-28_at_5_59_22_PM.jpeg` | Portrait | 1200×1600 | **Pricing** - Standard Package card |
+| `WhatsApp_Image_2026-08-28_at_5_59_22_PM__1_.jpeg` | Portrait | 1200×1600 | **Pricing** - Premium Package card |
+| `WhatsApp_Image_2026-08-28_at_6_01_33_PM.jpeg` | Portrait | 720×1280 | **Pricing** - Group Training card |
 
 No stock, Unsplash/Pexels, or other external images are used anywhere on
-the site — every image slot uses one of your own 11 supplied photographs.
+the site - every image slot uses one of your own 11 supplied photographs.
 `IMAGE-CREDITS.md` is kept (currently empty of third-party entries) in case
 you add licensed imagery later.
 
@@ -28,7 +28,7 @@ you add licensed imagery later.
 - The single landscape photo (2752×1536) is the only one shaped correctly
   for the hero, so it went there.
 - The reference template's black-and-white "This Is How I Made It" photo is
-  a pull-up bar shot — your pull-up bar photo was the closest match in both
+  a pull-up bar shot - your pull-up bar photo was the closest match in both
   content and composition, so it fills that slot (rendered in grayscale via
   CSS to match the reference treatment).
 - The remaining portrait shots were distributed across the Benefits grid
@@ -41,7 +41,7 @@ you add licensed imagery later.
 
 ## Reference note
 
-This layout follows the Wix "Roy Pratt — Certified Fitness Trainer" template
+This layout follows the Wix "Roy Pratt - Certified Fitness Trainer" template
 you shared as a screenshot: hero → trainer story → join-me banner → benefits
 (3 columns + image grid) → pricing (black "Choose Your Plan" section) →
 "Train With Purpose" marquee → Reach Out contact form → footer. Per your

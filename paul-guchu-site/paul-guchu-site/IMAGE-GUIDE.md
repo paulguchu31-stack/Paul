@@ -27,17 +27,17 @@ UPLOAD: `WhatsApp_Image_2026-08-28_at_5_59_17_PM.jpeg`
 USED IN: Benefits image grid, Reach Out / Contact section, Open Graph (social share) image
 
 UPLOAD: `WhatsApp_Image_2026-08-28_at_5_59_20_PM.jpeg`
-USED IN: Pricing — Basic Package card
+USED IN: Pricing - Basic Package card
 
 UPLOAD: `WhatsApp_Image_2026-08-28_at_5_59_22_PM.jpeg`
-USED IN: Pricing — Standard Package card
+USED IN: Pricing - Standard Package card
 
 UPLOAD: `WhatsApp_Image_2026-08-28_at_5_59_22_PM__1_.jpeg`
-USED IN: Pricing — Premium Package card
+USED IN: Pricing - Premium Package card
 
 UPLOAD: `WhatsApp_Image_2026-08-28_at_6_01_33_PM.jpeg`
-USED IN: Pricing — Group Training card
+USED IN: Pricing - Group Training card
 
-No files are missing — every image slot on the site is filled with one of
+No files are missing - every image slot on the site is filled with one of
 your own photographs. See `IMAGE-MANIFEST.md` for the full mapping and the
 reasoning behind each assignment.

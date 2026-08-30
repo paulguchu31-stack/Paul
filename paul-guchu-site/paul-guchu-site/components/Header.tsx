@@ -30,7 +30,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-40 transition-colors duration-300 ${
+      className={`fixed top-0 inset-x-0 z-[1000] transition-colors duration-300 ${
         solid ? "bg-white shadow-sm text-foreground" : "bg-transparent text-white"
       }`}
     >
@@ -87,7 +87,7 @@ export default function Header() {
 
       {/* Mobile drawer: fixed to the viewport, fully opaque, always above everything else. */}
       {open && (
-        <div className="md:hidden fixed inset-0 z-[60]">
+        <div className="md:hidden fixed inset-0 z-[1100]">
           <div
             className="absolute inset-0 bg-black/60"
             onClick={() => setOpen(false)}
@@ -95,7 +95,7 @@ export default function Header() {
           />
           <nav
             id="mobile-nav"
-            className="absolute top-0 right-0 h-full w-72 max-w-[80%] bg-white text-foreground px-6 pt-24 pb-8 flex flex-col gap-1 shadow-2xl"
+            className="absolute top-0 right-0 h-full w-[min(20rem,85vw)] max-w-[85vw] bg-white text-foreground px-6 pt-24 pb-8 flex flex-col gap-1 shadow-2xl"
           >
             {nav.map((item) => (
               <a

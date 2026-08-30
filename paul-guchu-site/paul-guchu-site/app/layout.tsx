@@ -7,6 +7,12 @@ import { faqs } from "@/lib/site";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ScrollProgress from "@/components/ScrollProgress";
 
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
 const display = Anton({
   subsets: ["latin"],
   weight: "400",
@@ -43,7 +49,7 @@ export default function RootLayout({
     {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
-      name: `${trainer.name} — Personal Training`,
+      name: `${trainer.name} - Personal Training`,
       areaServed: "Dubai, UAE",
       url: siteUrl,
       provider: {

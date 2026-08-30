@@ -2,7 +2,7 @@ import { trainer } from "./site";
 
 /**
  * Build a wa.me deep link with a URL-encoded, contextual message.
- * Never hardcode wa.me URLs elsewhere — always go through this helper.
+ * Never hardcode wa.me URLs elsewhere - always go through this helper.
  */
 export function createWhatsAppUrl(message: string): string {
   const encoded = encodeURIComponent(message);

@@ -12,7 +12,7 @@ const benefits = [
   {
     icon: Smile,
     title: "Boost Your Mood",
-    text: "Regular training is a proven way to support your mood and mental wellbeing — training sessions are built to fit that into your week.",
+    text: "Regular training is a proven way to support your mood and mental wellbeing - training sessions are built to fit that into your week.",
   },
   {
     icon: Repeat,

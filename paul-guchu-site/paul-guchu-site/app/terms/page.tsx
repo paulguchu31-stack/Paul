@@ -24,7 +24,7 @@ export default function TermsPage() {
             Information about training packages on this site is for general
             informational purposes. Enrollment, scheduling, and payment
             details for any package are arranged directly with{" "}
-            {trainer.name.split(" ")[0]} via WhatsApp or the contact form —
+            {trainer.name.split(" ")[0]} via WhatsApp or the contact form -
             this site does not process payments or bookings.
           </p>
         </section>

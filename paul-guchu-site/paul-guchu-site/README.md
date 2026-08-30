@@ -1,8 +1,8 @@
-# Paul Guchu — Personal Training Website
+# Paul Guchu - Personal Training Website
 
 A Next.js (App Router) + TypeScript + Tailwind CSS site for Paul Guchu,
 Certified Fitness Trainer, built to match the visual structure of the
-supplied Wix reference template ("Roy Pratt — Certified Fitness Trainer")
+supplied Wix reference template ("Roy Pratt - Certified Fitness Trainer")
 with Paul's own content, photos, packages, and WhatsApp-first contact flow.
 
 ## Tech stack
@@ -30,7 +30,7 @@ npm run start
 
 > Note: this project was written and organized in an environment without
 > package-registry network access, so `npm install` / `npm run build` have
-> not been executed here. Run them locally before deploying — see
+> not been executed here. Run them locally before deploying - see
 > "Before you deploy" below.
 
 ## Environment variables
@@ -38,7 +38,7 @@ npm run start
 Copy `.env.example` to `.env.local` and fill in real values:
 
 ```
-CONTACT_EMAIL=            # Paul's private inbox — never exposed to the client
+CONTACT_EMAIL=            # Paul's private inbox - never exposed to the client
 EMAIL_SERVER_HOST=
 EMAIL_SERVER_PORT=
 EMAIL_SERVER_USER=
@@ -58,7 +58,7 @@ Gmail with an app password, SendGrid, Resend's SMTP endpoint, etc.).
 All photos live in `public/images/` with their **original filenames
 unchanged**. See `IMAGE-MANIFEST.md` for exactly which file is used where,
 and `IMAGE-GUIDE.md` for the upload checklist. No stock imagery is used
-anywhere — every image slot is filled by one of Paul's own photos.
+anywhere - every image slot is filled by one of Paul's own photos.
 
 ## WhatsApp
 
@@ -69,8 +69,8 @@ message. Update the number or message copy centrally in `lib/site.ts` /
 
 ## Editing content
 
-Everything editable — trainer name/title, certifications, nav, packages,
-FAQ, social links — lives in `lib/site.ts`.
+Everything editable - trainer name/title, certifications, nav, packages,
+FAQ, social links - lives in `lib/site.ts`.
 
 ## Before you deploy
 
@@ -114,7 +114,7 @@ git push -u origin main
 ```
 app/
   layout.tsx        Root layout, fonts, metadata, JSON-LD
-  page.tsx           Homepage — assembles all sections
+  page.tsx           Homepage - assembles all sections
   globals.css
   sitemap.ts
   robots.ts

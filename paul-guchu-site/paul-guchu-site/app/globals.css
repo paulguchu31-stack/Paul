@@ -47,3 +47,114 @@ body {
 .btn-accent {
   @apply inline-flex items-center justify-center gap-2 bg-accent text-white px-6 py-3 text-sm font-bold uppercase tracking-wide hover:bg-accent-dark transition-all duration-200 focus-ring shadow-md hover:shadow-lg;
 }
+
+
+/* =========================================================
+   Responsive / Mobile Stability
+   ========================================================= */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 320px;
+}
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 767px) {
+  .container-x {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  section {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  h1 {
+    font-size: clamp(2.25rem, 11vw, 3.5rem);
+    line-height: 0.98;
+  }
+
+  h2 {
+    font-size: clamp(1.8rem, 8vw, 2.75rem);
+    line-height: 1.05;
+  }
+
+  p {
+    overflow-wrap: anywhere;
+  }
+
+  table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Make mobile navigation controls reliably visible */
+@media (max-width: 767px) {
+  .mobile-menu-button {
+    display: inline-flex !important;
+    position: relative !important;
+    z-index: 9999 !important;
+    width: 46px !important;
+    height: 46px !important;
+    min-width: 46px !important;
+    min-height: 46px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    border-radius: 9999px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .mobile-menu-button svg {
+    display: block !important;
+    width: 27px !important;
+    height: 27px !important;
+    min-width: 27px !important;
+    min-height: 27px !important;
+    stroke-width: 2.5 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-x {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .mobile-menu-button {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+  }
+}

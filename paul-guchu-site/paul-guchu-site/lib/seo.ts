@@ -18,7 +18,7 @@ export function buildMetadata(overrides?: Partial<Metadata>): Metadata {
       title: siteTitle,
       description: siteDescription,
       url: siteUrl,
-      siteName: `${trainer.name} — Personal Training`,
+      siteName: `${trainer.name} - Personal Training`,
       images: [
         {
           url: "/images/WhatsApp_Image_2026-08-28_at_5_59_17_PM.jpeg",

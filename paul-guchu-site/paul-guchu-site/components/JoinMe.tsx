@@ -32,7 +32,7 @@ export default function JoinMe() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
         <p className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 text-white text-sm sm:text-base max-w-md">
           Structured programs, real accountability, and a plan built around
-          your goals — this is what training with Paul looks like.
+          your goals - this is what training with Paul looks like.
         </p>
       </Reveal>
     </section>
