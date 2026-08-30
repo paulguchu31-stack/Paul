@@ -38,7 +38,7 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[60%_35%]"
+          className="hero-image object-cover object-[60%_35%]"
         />
       </div>
       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/50" />
