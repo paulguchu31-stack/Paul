@@ -160,3 +160,31 @@ textarea {
 }
 
 
+
+/* Mobile navigation button */
+@media (max-width: 767px) {
+  .mobile-menu-button {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 99999 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    flex-shrink: 0 !important;
+    cursor: pointer !important;
+  }
+
+  .mobile-menu-button svg {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 27px !important;
+    height: 27px !important;
+    pointer-events: none !important;
+  }
+}

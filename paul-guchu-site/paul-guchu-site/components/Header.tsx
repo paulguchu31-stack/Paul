@@ -75,14 +75,33 @@ export default function Header() {
         </a>
 
         <button
-          aria-label={open ? "Close menu" : "Open menu"}
-          aria-expanded={open}
-          aria-controls="mobile-nav"
-          onClick={() => setOpen((v) => !v)}
-          className="md:hidden relative z-[70] focus-ring rounded p-2"
-        >
-          {open ? <X size={26} /> : <Menu size={26} />}
-        </button>
+        type="button"
+        aria-label={open ? "Close menu" : "Open menu"}
+        aria-expanded={open}
+        aria-controls="mobile-nav"
+        onClick={() => setOpen((v) => !v)}
+        className={`mobile-menu-button md:hidden relative z-[99999] flex h-11 w-11 min-h-11 min-w-11 shrink-0 items-center justify-center rounded-full border-2 transition-all duration-200 ${
+          solid
+            ? "border-black/15 bg-white text-black shadow-md"
+            : "border-white/70 bg-black/50 text-white shadow-lg backdrop-blur-sm"
+        }`}
+      >
+        {open ? (
+          <X
+            size={27}
+            strokeWidth={3}
+            className="block"
+            aria-hidden="true"
+          />
+        ) : (
+          <Menu
+            size={27}
+            strokeWidth={3}
+            className="block"
+            aria-hidden="true"
+          />
+        )}
+      </button>
       </div>
 
       {/* Mobile drawer: fixed to the viewport, fully opaque, always above everything else. */}
