@@ -6,43 +6,35 @@ import { Mail } from "lucide-react";
 import { trainer } from "@/lib/site";
 import Reveal from "./Reveal";
 
-type Status = "idle" | "loading" | "success" | "error";
-
 export default function Contact() {
-  const [status, setStatus] = useState<Status>("idle");
+  const [sent, setSent] = useState(false);
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setStatus("loading");
     const form = e.currentTarget;
     const data = new FormData(form);
 
-    // Honeypot: bots tend to fill every field, humans never see this one.
-    if (data.get("company")) {
-      setStatus("success");
-      form.reset();
-      return;
-    }
+    const firstName = String(data.get("firstName") ?? "").trim();
+    const lastName = String(data.get("lastName") ?? "").trim();
+    const email = String(data.get("email") ?? "").trim();
+    const subjectField = String(data.get("subject") ?? "").trim();
+    const message = String(data.get("message") ?? "").trim();
 
-    const payload = {
-      name: `${data.get("firstName") ?? ""} ${data.get("lastName") ?? ""}`.trim(),
-      email: data.get("email"),
-      subject: data.get("subject"),
-      message: data.get("message"),
-    };
+    const fullName = `${firstName} ${lastName}`.trim();
+    const subject = subjectField || `Personal training enquiry from ${fullName}`;
+    const body = [
+      `Name: ${fullName}`,
+      `Email: ${email}`,
+      "",
+      message,
+    ].join("\n");
 
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-      if (!res.ok) throw new Error("failed");
-      setStatus("success");
-      form.reset();
-    } catch {
-      setStatus("error");
-    }
+    const mailtoUrl = `mailto:${trainer.email}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailtoUrl;
+    setSent(true);
   }
 
   return (
@@ -51,15 +43,6 @@ export default function Contact() {
         <p className="text-sm font-semibold mb-6">Got questions? Just contact me below</p>
 
         <form onSubmit={handleSubmit} className="space-y-5 max-w-md">
-          <input
-            type="text"
-            name="company"
-            tabIndex={-1}
-            autoComplete="off"
-            className="hidden"
-            aria-hidden="true"
-          />
-
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label htmlFor="firstName" className="block text-xs font-semibold mb-1">
@@ -123,8 +106,8 @@ export default function Contact() {
           </div>
 
           <div className="flex flex-wrap items-center gap-4">
-            <button type="submit" disabled={status === "loading"} className="btn-accent px-8">
-              {status === "loading" ? "Sending…" : "Submit"}
+            <button type="submit" className="btn-accent px-8">
+              Submit
             </button>
             <a
               href={`mailto:${trainer.email}`}
@@ -135,16 +118,10 @@ export default function Contact() {
             </a>
           </div>
 
-          {status === "success" && (
+          {sent && (
             <p role="status" className="text-sm text-accent-dark">
-              Thanks for reaching out. Your message has been sent to Paul. He&apos;ll
-              get back to you soon.
-            </p>
-          )}
-          {status === "error" && (
-            <p role="alert" className="text-sm text-red-600">
-              Something went wrong. Please try again, message Paul directly on
-              WhatsApp, or email {trainer.email}.
+              Your email draft is ready in your email app, subject and
+              message already filled in. Just hit send from there.
             </p>
           )}
         </form>

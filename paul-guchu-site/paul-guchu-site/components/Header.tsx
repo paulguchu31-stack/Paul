@@ -18,17 +18,23 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Lock body scroll while the mobile drawer is open.
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   const solid = scrolled || open;
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-40 transition-all duration-300 ${
-        solid
-          ? "bg-white/95 backdrop-blur-md shadow-sm text-foreground"
-          : "bg-transparent text-white"
+      className={`fixed top-0 inset-x-0 z-40 transition-colors duration-300 ${
+        solid ? "bg-white shadow-sm text-foreground" : "bg-transparent text-white"
       }`}
     >
-      <div className="container-x flex items-center justify-between h-18 sm:h-20 py-3">
+      <div className="container-x flex items-center justify-between h-16 sm:h-20 py-3">
         <a href="#top" className="focus-ring rounded leading-tight">
           <span className="block font-display text-lg sm:text-xl tracking-wide">
             {trainer.name.toUpperCase()}
@@ -73,49 +79,46 @@ export default function Header() {
           aria-expanded={open}
           aria-controls="mobile-nav"
           onClick={() => setOpen((v) => !v)}
-          className="md:hidden focus-ring rounded p-2"
+          className="md:hidden relative z-[70] focus-ring rounded p-2"
         >
           {open ? <X size={26} /> : <Menu size={26} />}
         </button>
       </div>
 
-      {/* Mobile slide-in drawer */}
-      <div
-        className={`md:hidden fixed inset-0 top-0 transition-opacity duration-300 ${
-          open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
-      >
-        <div
-          className="absolute inset-0 bg-black/40"
-          onClick={() => setOpen(false)}
-          aria-hidden="true"
-        />
-        <nav
-          id="mobile-nav"
-          className={`absolute top-0 right-0 h-full w-72 max-w-[80%] bg-white text-foreground px-6 pt-24 pb-8 flex flex-col gap-1 shadow-2xl transition-transform duration-300 ${
-            open ? "translate-x-0" : "translate-x-full"
-          }`}
-        >
-          {nav.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              onClick={() => setOpen(false)}
-              className="py-3 text-base border-b border-border last:border-none focus-ring rounded"
-            >
-              {item.label}
-            </a>
-          ))}
-          <a
-            href={createWhatsAppUrl(whatsappMessages.hero)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-6 inline-flex items-center justify-center rounded-full bg-accent text-white font-semibold text-sm px-5 py-3 focus-ring"
+      {/* Mobile drawer: fixed to the viewport, fully opaque, always above everything else. */}
+      {open && (
+        <div className="md:hidden fixed inset-0 z-[60]">
+          <div
+            className="absolute inset-0 bg-black/60"
+            onClick={() => setOpen(false)}
+            aria-hidden="true"
+          />
+          <nav
+            id="mobile-nav"
+            className="absolute top-0 right-0 h-full w-72 max-w-[80%] bg-white text-foreground px-6 pt-24 pb-8 flex flex-col gap-1 shadow-2xl"
           >
-            WhatsApp {trainer.name.split(" ")[0]}
-          </a>
-        </nav>
-      </div>
+            {nav.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className="py-3 text-base border-b border-border last:border-none focus-ring rounded"
+              >
+                {item.label}
+              </a>
+            ))}
+            <a
+              href={createWhatsAppUrl(whatsappMessages.hero)}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className="mt-6 inline-flex items-center justify-center rounded-full bg-accent text-white font-semibold text-sm px-5 py-3 focus-ring"
+            >
+              WhatsApp {trainer.name.split(" ")[0]}
+            </a>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }

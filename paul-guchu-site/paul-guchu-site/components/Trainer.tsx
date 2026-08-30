@@ -11,7 +11,7 @@ export default function Trainer() {
           <span className="tag-label absolute top-5 left-5 sm:top-8 sm:left-8 z-10">
             This Is How I Made It
           </span>
-          <div className="relative aspect-[4/5] md:aspect-auto md:h-full">
+          <div className="relative aspect-[3/4] sm:aspect-[4/5] md:aspect-[3/4] lg:aspect-[2/3]">
             <Image
               src="/images/WhatsApp_Image_2026-08-28_at_5_59_20_PM__1_.jpeg"
               alt="Paul Guchu, certified fitness trainer, at My PT Academy"
@@ -30,12 +30,14 @@ export default function Trainer() {
             <h2 className="font-display text-3xl sm:text-4xl uppercase leading-[0.95] mb-4">
               Built On Consistency, Not Shortcuts
             </h2>
-            <p className="text-muted leading-relaxed">
+            <p className="text-muted leading-relaxed text-base sm:text-lg">
               I'm Paul Guchu, a certified fitness trainer based in Dubai. My
               approach is built on structured training, consistency, and
               personalized guidance, helping clients build strength,
               confidence, and sustainable fitness habits through a plan made
-              for their goals, not a generic template.
+              for their goals, not a generic template. Every program starts
+              with where you actually are, not a one-size-fits-all routine,
+              so progress stays realistic, measurable, and yours to keep.
             </p>
             <a
               href={createWhatsAppUrl(whatsappMessages.about)}
