@@ -7,6 +7,7 @@ import { faqs } from "@/lib/site";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ScrollProgress from "@/components/ScrollProgress";
 import CursorFollower from "@/components/CursorFollower";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const viewport = {
   width: "device-width",
@@ -78,6 +79,9 @@ export default function RootLayout({
         <ScrollProgress />
         {children}
         <FloatingWhatsApp />
+        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+        )}
         <script
           type="application/ld+json"
           // eslint-disable-next-line react/no-danger
