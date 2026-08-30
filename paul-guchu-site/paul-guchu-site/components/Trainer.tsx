@@ -13,24 +13,27 @@ export default function Trainer() {
           </span>
           <div className="relative aspect-[4/5] md:aspect-auto md:h-full">
             <Image
-              src="/images/WhatsApp_Image_2026-08-28_at_6_00_11_PM.jpeg"
-              alt="Paul Guchu performing a strict pull-up at the gym"
+              src="/images/WhatsApp_Image_2026-08-28_at_5_59_20_PM__1_.jpeg"
+              alt="Paul Guchu, certified fitness trainer, at My PT Academy"
               fill
               sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-cover object-[center_15%] grayscale"
+              className="object-cover object-top grayscale"
             />
           </div>
         </Reveal>
 
         <Reveal from="right" delay={100} className="flex items-center bg-white">
           <div className="px-5 sm:px-8 md:px-12 py-12 md:py-0 max-w-md">
-            <p className="text-xs font-semibold tracking-widest uppercase text-muted mb-2">
+            <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-2">
               My Story
             </p>
+            <h2 className="font-display text-3xl sm:text-4xl uppercase leading-[0.95] mb-4">
+              Built On Consistency, Not Shortcuts
+            </h2>
             <p className="text-muted leading-relaxed">
               I'm Paul Guchu, a certified fitness trainer based in Dubai. My
               approach is built on structured training, consistency, and
-              personalized guidance — helping clients build strength,
+              personalized guidance, helping clients build strength,
               confidence, and sustainable fitness habits through a plan made
               for their goals, not a generic template.
             </p>

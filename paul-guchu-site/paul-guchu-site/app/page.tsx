@@ -13,12 +13,12 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <Marquee />
       <Trainer />
       <Certifications />
       <JoinMe />
       <Benefits />
       <Pricing />
-      <Marquee />
       <FAQ />
       <Contact />
       <Footer />
