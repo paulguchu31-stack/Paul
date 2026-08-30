@@ -1,6 +1,6 @@
-# Paul Guchu - Personal Training Website
+# Coach Paul - Personal Training Website
 
-A Next.js (App Router) + TypeScript + Tailwind CSS site for Paul Guchu,
+A Next.js (App Router) + TypeScript + Tailwind CSS site for Coach Paul,
 Certified Fitness Trainer, built to match the visual structure of the
 supplied Wix reference template ("Roy Pratt - Certified Fitness Trainer")
 with Paul's own content, photos, packages, and WhatsApp-first contact flow.
@@ -84,7 +84,7 @@ FAQ, social links - lives in `lib/site.ts`.
 ```bash
 git init
 git add .
-git commit -m "Initial Paul Guchu fitness website"
+git commit -m "Initial Coach Paul fitness website"
 git branch -M main
 git remote add origin YOUR_GITHUB_REPOSITORY_URL
 git push -u origin main

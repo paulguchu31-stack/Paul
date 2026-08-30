@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { siteUrl, trainer } from "./site";
 
-export const siteTitle = "Paul Guchu | Certified Fitness Trainer & Personal Training";
+export const siteTitle = "Coach Paul | Certified Fitness Trainer & Personal Training";
 export const siteDescription =
-  "Paul Guchu is a certified fitness trainer offering personalized personal training, structured workout programs, fitness guidance, and group training.";
+  "Coach Paul is a certified fitness trainer offering personalized personal training, structured workout programs, fitness guidance, and group training.";
 
 export function buildMetadata(overrides?: Partial<Metadata>): Metadata {
   return {

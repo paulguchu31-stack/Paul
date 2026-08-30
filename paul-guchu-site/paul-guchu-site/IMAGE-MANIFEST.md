@@ -1,4 +1,4 @@
-# Image Manifest - Paul Guchu Personal Training Website
+# Image Manifest - Coach Paul Personal Training Website
 
 All filenames below are **exactly** as uploaded, unchanged (case, hyphens,
 underscores, spaces, and extension all preserved). They live in

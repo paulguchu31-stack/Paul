@@ -1,6 +1,6 @@
 # Image Credits
 
-Every photograph used on this site is one of Paul Guchu's own supplied
+Every photograph used on this site is one of Coach Paul's own supplied
 gym photographs (see `IMAGE-MANIFEST.md`). No stock or third-party imagery
 is used anywhere on the site, so there is nothing to credit here.
 

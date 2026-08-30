@@ -34,7 +34,7 @@ export default function Hero() {
       <div ref={imgRef} className="absolute inset-0 scale-110 will-change-transform">
         <Image
           src="/images/Editing_gym_image_and_barbell_202608281934.jpeg"
-          alt="Paul Guchu training on the gym floor at My PT Academy"
+          alt="Coach Paul training on the gym floor at My PT Academy"
           fill
           priority
           sizes="100vw"

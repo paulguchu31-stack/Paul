@@ -24,7 +24,7 @@ const benefits = [
 const gridImages = [
   {
     src: "/images/WhatsApp_Image_2026-08-28_at_5_59_21_PM.jpeg",
-    alt: "Paul Guchu at My PT Academy gym",
+    alt: "Coach Paul at My PT Academy gym",
     position: "object-top",
   },
   {
@@ -34,7 +34,7 @@ const gridImages = [
   },
   {
     src: "/images/WhatsApp_Image_2026-08-28_at_5_59_19_PM.jpeg",
-    alt: "Paul Guchu, certified fitness trainer",
+    alt: "Coach Paul, certified fitness trainer",
     position: "object-top",
   },
   {

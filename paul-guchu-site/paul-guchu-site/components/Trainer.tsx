@@ -14,7 +14,7 @@ export default function Trainer() {
           <div className="relative aspect-[3/4] sm:aspect-[4/5] md:aspect-[3/4] lg:aspect-[2/3]">
             <Image
               src="/images/WhatsApp_Image_2026-08-28_at_5_59_20_PM__1_.jpeg"
-              alt="Paul Guchu, certified fitness trainer, at My PT Academy"
+              alt="Coach Paul, certified fitness trainer, at My PT Academy"
               fill
               sizes="(min-width: 768px) 50vw, 100vw"
               className="object-cover object-top grayscale"
@@ -31,7 +31,7 @@ export default function Trainer() {
               Built On Consistency, Not Shortcuts
             </h2>
             <p className="text-muted leading-relaxed text-base sm:text-lg">
-              I'm Paul Guchu, a certified fitness trainer based in Dubai. My
+              I'm Coach Paul, a certified fitness trainer based in Dubai. My
               approach is built on structured training, consistency, and
               personalized guidance, helping clients build strength,
               confidence, and sustainable fitness habits through a plan made

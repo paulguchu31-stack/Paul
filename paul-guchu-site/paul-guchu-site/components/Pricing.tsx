@@ -29,7 +29,7 @@ export default function Pricing() {
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={plan.image}
-                    alt={`${plan.name}: Paul Guchu personal training`}
+                    alt={`${plan.name}: Coach Paul personal training`}
                     fill
                     sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
                     className="object-cover object-top transition-transform duration-500 group-hover:scale-110"

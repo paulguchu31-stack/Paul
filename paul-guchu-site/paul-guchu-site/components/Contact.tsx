@@ -133,7 +133,7 @@ export default function Contact() {
         </span>
         <Image
           src="/images/WhatsApp_Image_2026-08-28_at_5_59_17_PM.jpeg"
-          alt="Paul Guchu, certified fitness trainer"
+          alt="Coach Paul, certified fitness trainer"
           fill
           sizes="(min-width: 768px) 50vw, 100vw"
           className="object-cover object-top"
