@@ -1,5 +1,5 @@
 // Central configuration for Paul Guchu's fitness website.
-// Update trainer info, packages, nav, and social links here — everything
+// Update trainer info, packages, nav, and social links here; everything
 // else on the site reads from this single source of truth.
 
 export const trainer = {
@@ -8,6 +8,7 @@ export const trainer = {
   location: "Dubai, UAE",
   whatsappNumber: "971555420634", // digits only, used to build wa.me links
   whatsappDisplay: "+971 55 542 0634",
+  email: "cp.fitwithpaul@gmail.com",
 };
 
 export const certifications = [
@@ -34,7 +35,7 @@ export const nav = [
   { label: "Contact", href: "#contact" },
 ] as const;
 
-// Free-to-use stock photography (Pexels License — free for commercial use,
+// Free-to-use stock photography (Pexels License, free for commercial use,
 // no attribution legally required, but credited in IMAGE-CREDITS.md anyway).
 // All by photographer Andrea Piacquadio.
 export const stockImages = {
@@ -47,10 +48,9 @@ export const stockImages = {
 };
 
 export const socialLinks = {
-  facebook: "#",
-  instagram: "#",
-  tiktok: "#",
-  youtube: "#",
+  facebook: "https://www.facebook.com/profile.php?id=61554854015437",
+  instagram: "https://www.instagram.com/coach_pau?igsi=aXZ2eDZsbmNnNDBj",
+  tiktok: "https://www.tiktok.com/@coach_paul5?_r=1&_t=ZS-99JiejzLOPH",
   linkedin: "#",
 };
 

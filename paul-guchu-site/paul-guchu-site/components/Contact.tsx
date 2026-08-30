@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { Mail } from "lucide-react";
+import { trainer } from "@/lib/site";
 import Reveal from "./Reveal";
 
 type Status = "idle" | "loading" | "success" | "error";
@@ -15,7 +17,7 @@ export default function Contact() {
     const form = e.currentTarget;
     const data = new FormData(form);
 
-    // Honeypot — bots tend to fill every field, humans never see this one.
+    // Honeypot: bots tend to fill every field, humans never see this one.
     if (data.get("company")) {
       setStatus("success");
       form.reset();
@@ -120,9 +122,18 @@ export default function Contact() {
             />
           </div>
 
-          <button type="submit" disabled={status === "loading"} className="btn-accent px-8">
-            {status === "loading" ? "Sending…" : "Submit"}
-          </button>
+          <div className="flex flex-wrap items-center gap-4">
+            <button type="submit" disabled={status === "loading"} className="btn-accent px-8">
+              {status === "loading" ? "Sending…" : "Submit"}
+            </button>
+            <a
+              href={`mailto:${trainer.email}`}
+              className="inline-flex items-center gap-2 text-sm font-semibold text-foreground hover:text-accent transition-colors focus-ring rounded"
+            >
+              <Mail size={16} aria-hidden="true" />
+              Or email me directly
+            </a>
+          </div>
 
           {status === "success" && (
             <p role="status" className="text-sm text-accent-dark">
@@ -132,8 +143,8 @@ export default function Contact() {
           )}
           {status === "error" && (
             <p role="alert" className="text-sm text-red-600">
-              Something went wrong. Please try again or message Paul directly on
-              WhatsApp.
+              Something went wrong. Please try again, message Paul directly on
+              WhatsApp, or email {trainer.email}.
             </p>
           )}
         </form>

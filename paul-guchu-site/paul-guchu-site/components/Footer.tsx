@@ -17,18 +17,33 @@ export default function Footer() {
             </p>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href={socialLinks.instagram} className="hover:text-accent transition-colors focus-ring rounded">
+                <a
+                  href={socialLinks.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-accent transition-colors focus-ring rounded"
+                >
                   Instagram
                 </a>
               </li>
               <li>
-                <a href={socialLinks.facebook} className="hover:text-accent transition-colors focus-ring rounded">
+                <a
+                  href={socialLinks.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-accent transition-colors focus-ring rounded"
+                >
                   Facebook
                 </a>
               </li>
               <li>
-                <a href={socialLinks.youtube} className="hover:text-accent transition-colors focus-ring rounded">
-                  Youtube
+                <a
+                  href={socialLinks.tiktok}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-accent transition-colors focus-ring rounded"
+                >
+                  TikTok
                 </a>
               </li>
             </ul>
@@ -68,8 +83,17 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className="text-xs text-white/50 mt-12">
-          © {year} {trainer.name}. All rights reserved.
+        <p className="text-sm mt-10">
+          <a
+            href={`mailto:${trainer.email}`}
+            className="hover:text-accent transition-colors focus-ring rounded"
+          >
+            {trainer.email}
+          </a>
+        </p>
+
+        <p className="text-xs text-white/50 mt-6">
+          &copy; {year} {trainer.name}. All rights reserved.
         </p>
       </div>
     </footer>
