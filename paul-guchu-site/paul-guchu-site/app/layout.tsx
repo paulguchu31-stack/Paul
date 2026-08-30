@@ -6,6 +6,7 @@ import { trainer, siteUrl, certifications } from "@/lib/site";
 import { faqs } from "@/lib/site";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ScrollProgress from "@/components/ScrollProgress";
+import CursorFollower from "@/components/CursorFollower";
 
 
 export const viewport = {
@@ -74,6 +75,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${display.variable} ${body.variable}`}>
       <body className="font-body antialiased">
+        <CursorFollower />
         <ScrollProgress />
         {children}
         <FloatingWhatsApp />
