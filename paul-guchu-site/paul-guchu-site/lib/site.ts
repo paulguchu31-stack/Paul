@@ -1,9 +1,9 @@
-// Central configuration for Coach Paul's fitness website.
+// Central configuration for Paul Guchu's fitness website.
 // Update trainer info, packages, nav, and social links here; everything
 // else on the site reads from this single source of truth.
 
 export const trainer = {
-  name: "Coach Paul",
+  name: "Paul Guchu",
   title: "Certified Fitness Trainer",
   location: "Dubai, UAE",
   whatsappNumber: "971555420634", // digits only, used to build wa.me links
@@ -69,8 +69,8 @@ export const trainingPlans: TrainingPlan[] = [
   {
     id: "basic",
     name: "Basic Package",
-    price: "AED 1,200",
-    priceNote: "/ month",
+    price: "Contact for Pricing",
+    priceNote: "",
     features: [
       "2 training sessions per week (8 sessions/month)",
       "Fitness assessment",
@@ -84,8 +84,8 @@ export const trainingPlans: TrainingPlan[] = [
   {
     id: "standard",
     name: "Standard Package",
-    price: "AED 2,000",
-    priceNote: "/ month",
+    price: "Contact for Pricing",
+    priceNote: "",
     features: [
       "3 training sessions per week (12 sessions/month)",
       "Personalized workout program",
@@ -101,8 +101,8 @@ export const trainingPlans: TrainingPlan[] = [
   {
     id: "premium",
     name: "Premium Package",
-    price: "AED 3,500",
-    priceNote: "/ month",
+    price: "Contact for Pricing",
+    priceNote: "",
     features: [
       "4 to 5 training sessions per week (16 to 20 sessions/month)",
       "Customized training and nutrition plan",
@@ -117,8 +117,8 @@ export const trainingPlans: TrainingPlan[] = [
   {
     id: "group",
     name: "Group Training Package",
-    price: "AED 400",
-    priceNote: "/ person / month",
+    price: "Contact for Pricing",
+    priceNote: "",
     features: [
       "Small group sessions (3 to 10 people)",
       "3 sessions per week",
@@ -132,17 +132,17 @@ export const trainingPlans: TrainingPlan[] = [
 
 export const faqs = [
   {
-    question: "What does personal training with Coach Paul include?",
+    question: "What does personal training with Paul Guchu include?",
     answer:
       "Personal training with Paul includes a fitness assessment, a structured workout plan tailored to your goals, and regular progress tracking. Higher-tier packages add nutrition guidance and ongoing WhatsApp support.",
   },
   {
     question: "How much does personal training cost?",
     answer:
-      "Packages range from AED 1,200/month for the Basic Package up to AED 3,500/month for the Premium Package. Group Training is available at AED 400 per person/month.",
+      "Pricing depends on the package and your goals, so it's shared directly rather than listed here. Message Paul on WhatsApp or use the contact form and he'll confirm current rates for the Basic, Standard, Premium, or Group Training package.",
   },
   {
-    question: "What qualifications does Coach Paul have?",
+    question: "What qualifications does Paul Guchu have?",
     answer:
       "Paul holds an Active IQ Level 3 Diploma in Personal Training, an Active IQ Level 2 Diploma in Gym Instructing, and an Emergency First Aid / CPR Certification.",
   },
@@ -164,7 +164,7 @@ export const faqs = [
   {
     question: "Do you offer group training?",
     answer:
-      "Yes. Group Training is run in small groups of 3 to 10 people, 3 sessions per week, at AED 400 per person/month.",
+      "Yes. Group Training is run in small groups of 3 to 10 people, 3 sessions per week. Message Paul for current group rates.",
   },
   {
     question: "How do I get started?",
