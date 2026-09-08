@@ -1,9 +1,9 @@
-// Central configuration for Paul Guchu's fitness website.
+// Central configuration for Coach Paul's fitness website.
 // Update trainer info, packages, nav, and social links here; everything
 // else on the site reads from this single source of truth.
 
 export const trainer = {
-  name: "Paul Guchu",
+  name: "Coach Paul",
   title: "Certified Fitness Trainer",
   location: "Dubai, UAE",
   whatsappNumber: "971555420634", // digits only, used to build wa.me links
@@ -132,7 +132,7 @@ export const trainingPlans: TrainingPlan[] = [
 
 export const faqs = [
   {
-    question: "What does personal training with Paul Guchu include?",
+    question: "What does personal training with Coach Paul include?",
     answer:
       "Personal training with Paul includes a fitness assessment, a structured workout plan tailored to your goals, and regular progress tracking. Higher-tier packages add nutrition guidance and ongoing WhatsApp support.",
   },
@@ -142,7 +142,7 @@ export const faqs = [
       "Pricing depends on the package and your goals, so it's shared directly rather than listed here. Message Paul on WhatsApp or use the contact form and he'll confirm current rates for the Basic, Standard, Premium, or Group Training package.",
   },
   {
-    question: "What qualifications does Paul Guchu have?",
+    question: "What qualifications does Coach Paul have?",
     answer:
       "Paul holds an Active IQ Level 3 Diploma in Personal Training, an Active IQ Level 2 Diploma in Gym Instructing, and an Emergency First Aid / CPR Certification.",
   },
