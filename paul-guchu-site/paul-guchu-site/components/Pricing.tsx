@@ -29,7 +29,7 @@ export default function Pricing() {
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={plan.image}
-                    alt={`${plan.name}: Coach Paul personal training`}
+                    alt={`${plan.name}: Paul Guchu personal training`}
                     fill
                     sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
                     className="object-cover object-top transition-transform duration-500 group-hover:scale-110"
@@ -37,10 +37,6 @@ export default function Pricing() {
                 </div>
                 <div className="p-6 flex flex-col flex-1">
                   <h3 className="font-display text-xl uppercase mb-1">{plan.name}</h3>
-                  <p className="mb-1">
-                    <span className="text-2xl font-bold">{plan.price}</span>{" "}
-                    <span className="text-xs text-muted">{plan.priceNote}</span>
-                  </p>
 
                   <a
                     href={createWhatsAppUrl(plan.whatsappMessage)}
